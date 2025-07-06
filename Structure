@@ -11,12 +11,10 @@ NodeEngine/
 │   │   │   ├── SpaceShip/      # Spaceship model
 │   │   │   │   ├── scene.bin   
 │   │   │   │   └── scene.gltf  
-│   │   │   ├── ship.gltf       # Placeholder for spaceship model
-│   │   │   └── planet.gltf     # Placeholder for planet model
 │   │   ├── textures/           # Textures for models
 │   │   │   └── planet_texture.png # Placeholder for planet texture
 │   │   └── sounds/             # Audio files
-│   │       └── engine.wav      # Placeholder for engine sound
+│   │       └── engine.mp3      # Audio file for engine sound
 │   ├── js/                     # JavaScript code
 │   │   ├── core/               # Core game systems
 │   │   │   ├── cameraManager.js # Manages camera perspectives
