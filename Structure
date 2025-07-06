@@ -1,4 +1,3 @@
-(developed along side Grok 3)
 NodeEngine/
 ├── client/                     # Client-side code
 │   ├── assets/                 # Game assets
@@ -20,9 +19,12 @@ NodeEngine/
 │   │       └── engine.wav      # Placeholder for engine sound
 │   ├── js/                     # JavaScript code
 │   │   ├── core/               # Core game systems
-│   │   │   ├── cameraManager.js # Manages camera perspectives (chase, first-person)
-│   │   │   ├── inputManager.js # Handles player input (keyboard, mouse)
-│   │   │   ├── particleManager.js # Manages particle effects (trails, stars)
+│   │   │   ├── cameraManager.js # Manages camera perspectives
+│   │   │   ├── inputManager.js # Handles player input
+│   │   │   ├── particleManager.js # Manages particle effects
+│   │   │   ├── lightingManager.js # Manages lighting effects
+│   │   │   ├── physicsManager.js # Handles physics interactions
+│   │   │   ├── weatherManager.js # Simulates space weather effects
 │   │   │   ├── player.js       # Player controls and ship logic
 │   │   │   └── sector.js       # Sector management
 │   │   ├── utils/              # Utility functions
@@ -56,40 +58,3 @@ NodeEngine/
 ├── package.json                # Node.js dependencies and scripts
 ├── .gitignore                  # Git ignore file
 └── webpack.config.js           # Webpack config for bundling client code
-
-----------------------------------------------------------------------------------------
-
-File Descriptions:
-
-client/index.html: Main HTML file with a canvas for Babylon.js rendering and links to main.js and style.css.
-client/js/main.js: Client entry point, sets up Babylon.js engine, scene, and initializes managers, player, and sector.
-client/js/core/cameraManager.js: Manages camera perspectives (e.g., chase camera following the ship, first-person view).
-client/js/core/inputManager.js: Handles player input (keyboard for movement, mouse for potential camera control).
-client/js/core/particleManager.js: Manages particle effects (e.g., engine trails, star fields).
-client/js/core/player.js: Controls the spaceship (currently loads SpaceShip/scene.gltf)
-client/js/core/sector.js: Manages sector rendering (currently loads Planets/Earth/scene.gltf).
-client/js/utils/utils.js
-client/css/style.css
-client/assets/models/Planets/Earth/scene.gltf
-client/assets/models/Planets/Earth/scene.bin
-client/assets/models/Planets/Earth/textures/Material_002_diff_use.jpg
-client/assets/models/SpaceShip/scene.gltf
-client/assets/models/SpaceShip/scene.bin
-client/assets/models/ship.gltf
-client/assets/models/planet.gltf
-client/assets/textures/planet_texture.png
-client/assets/sounds/engine.wav
-server/server.js: Express.js server, serves client files and provides a sector data API (/api/sector/:x/:y/:z).
-server/src/core/sectorManager.js: Placeholder for sector data management.
-server/src/core/gameState.js: Placeholder for game state tracking.
-server/src/routes/api.js: Placeholder for additional API endpoints.
-server/src/utils/utils.js: Placeholder for server-side utility functions.
-shared/constants.js: Defines game constants (e.g., SECTOR_SIZE = 1000, MAX_SECTORS = 999).
-shared/math.js: Contains shared math utilities (e.g., distance function).
-tests/client/client.test.js: Placeholder for client-side unit tests.
-tests/server/server.test.js: Placeholder for server-side unit tests.
-docs/README.md: Project overview, setup instructions, and asset requirements.
-docs/project_tasks.md: Development task list with milestones.
-package.json
-.gitignore: Ignores node_modules, dist, and log files.
-webpack.config.js
