@@ -25,6 +25,7 @@ NodeEngine/
 │   │   │   ├── lightingManager.js # Manages lighting effects
 │   │   │   ├── physicsManager.js # Handles physics interactions
 │   │   │   ├── weatherManager.js # Simulates space weather effects
+│   │   │   ├── renderingManager.js # Optimizes and controls rendering
 │   │   │   ├── player.js       # Player controls and ship logic
 │   │   │   └── sector.js       # Sector management
 │   │   ├── utils/              # Utility functions
