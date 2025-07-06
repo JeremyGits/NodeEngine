@@ -1,50 +1,44 @@
 NodeEngine/
 ├── client/                     # Client-side code (browser)
 │   ├── assets/                 # Game assets (models, textures, sounds)
-│   │   ├── models/             # 3D models (e.g., .gltf files)
+│   │   ├── models/             # 3D models (.gltf)
+│   │   │   ├── ship.gltf       
+│   │   │   └── planet.gltf     
 │   │   ├── textures/           # Textures for models
+│   │   │   └── planet_texture.png # Placeholder for planet texture
 │   │   └── sounds/             # Audio files
+│   │       └── engine.wav      
 │   ├── js/                     # JavaScript code
 │   │   ├── core/               # Core game systems
-│   │   │   ├── engine.js       # Babylon.js engine setup
-│   │   │   ├── sector.js       # Sector management
-│   │   │   └── player.js       # Player controls and ship
+│   │   │   ├── player.js       # Player controls and ship logic
+│   │   │   └── sector.js       # Sector management
 │   │   ├── utils/              # Utility functions
+│   │   │   └── utils.js        # Client-side utilities
 │   │   └── main.js             # Entry point for client
 │   ├── css/                    # Styles for UI
-│   │   └── style.css
-│   └── index.html              # Main HTML file
-├── server/                     # Server-side code (Node.js)
+│   │   └── style.css           # canvas styling
+│   └── index.html              # canvas for rendering
+├── server/                     # Server-side code
 │   ├── src/                    # Server logic
 │   │   ├── core/               # Core server systems
 │   │   │   ├── sectorManager.js # Manages sector data
 │   │   │   └── gameState.js    # Tracks game state
 │   │   ├── routes/             # API endpoints
-│   │   │   └── api.js
+│   │   │   └── api.js          # additional API routes
 │   │   └── utils/              # Server utilities
-│   ├── data/                   # Static data (e.g., sector templates)
+│   │       └── utils.js        # server-side utilities
+│   ├── data/                   # Static data
 │   └── server.js               # Main server file
 ├── shared/                     # Code shared between client and server
-│   ├── constants.js            # Game constants (e.g., sector size)
+│   ├── constants.js            # Game constants
 │   └── math.js                 # Shared math utilities
 ├── tests/                      # Unit tests
-│   ├── client/
-│   └── server/
+│   ├── client/                 # Client-side tests
+│   │   └── client.test.js      # Placeholder for client tests
+│   └── server/                 # Server-side tests
+│       └── server.test.js      # Placeholder for server tests
 ├── docs/                       # Documentation
-│   └── README.md
+│   ├── README.md               # Project overview and setup instructions
 ├── package.json                # Node.js dependencies and scripts
 ├── .gitignore                  # Git ignore file
 └── webpack.config.js           # Webpack config for bundling client code
-
-
-
-client: browser-facing code, including Babylon.js rendering, player controls and assets.
-server: Node.js/Express server for game logic, sector data, and multiplayer.
-shared: Common code (constants, math utilities).
-assets: Stores 3D models (.gltf), textures, and sounds.
-tests: For unit tests.
-docs: Documentation.
-
-
-
-webpack.config.js: Bundles client-side JavaScript for performance.
