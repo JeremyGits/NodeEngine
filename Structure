@@ -1,10 +1,19 @@
 NodeEngine/
-├── client/                     # Client-side code (browser)
-│   ├── assets/                 # Game assets (models, textures, sounds)
-│   │   ├── models/             # 3D models (.gltf)
+├── client/                     # Client-side code 
+│   ├── assets/                 # Game assets
+│   │   ├── models/             # 3D models
+│   │   │   ├── Planets/        # planetary models
+│   │   │   │   ├── Earth/      # Earth planet model
+│   │   │   │   │   ├── scene.bin  
+│   │   │   │   │   ├── scene.gltf 
+│   │   │   │   └── textures/   
+│   │   │   │       └── Material_002_diff_use.jpg
+│   │   │   ├── SpaceShip/      # Spaceship model
+│   │   │   │   ├── scene.bin   
+│   │   │   │   └── scene.gltf  
 │   │   │   ├── ship.gltf       
 │   │   │   └── planet.gltf     
-│   │   ├── textures/           # Textures for models
+│   │   ├── textures/           
 │   │   │   └── planet_texture.png # Placeholder for planet texture
 │   │   └── sounds/             # Audio files
 │   │       └── engine.wav      
@@ -13,20 +22,20 @@ NodeEngine/
 │   │   │   ├── player.js       # Player controls and ship logic
 │   │   │   └── sector.js       # Sector management
 │   │   ├── utils/              # Utility functions
-│   │   │   └── utils.js        # Client-side utilities
+│   │   │   └── utils.js        # Placeholder for client-side utilities
 │   │   └── main.js             # Entry point for client
 │   ├── css/                    # Styles for UI
-│   │   └── style.css           # canvas styling
-│   └── index.html              # canvas for rendering
+│   │   └── style.css           # Basic canvas styling
+│   └── index.html              # Main HTML file
 ├── server/                     # Server-side code
 │   ├── src/                    # Server logic
 │   │   ├── core/               # Core server systems
 │   │   │   ├── sectorManager.js # Manages sector data
 │   │   │   └── gameState.js    # Tracks game state
 │   │   ├── routes/             # API endpoints
-│   │   │   └── api.js          # additional API routes
+│   │   │   └── api.js          # Placeholder for additional API routes
 │   │   └── utils/              # Server utilities
-│   │       └── utils.js        # server-side utilities
+│   │       └── utils.js        # Placeholder for server-side utilities
 │   ├── data/                   # Static data
 │   └── server.js               # Main server file
 ├── shared/                     # Code shared between client and server
@@ -39,6 +48,7 @@ NodeEngine/
 │       └── server.test.js      # Placeholder for server tests
 ├── docs/                       # Documentation
 │   ├── README.md               # Project overview and setup instructions
+│   └── project_tasks.md        # Development task list
 ├── package.json                # Node.js dependencies and scripts
 ├── .gitignore                  # Git ignore file
 └── webpack.config.js           # Webpack config for bundling client code
