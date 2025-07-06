@@ -35,3 +35,16 @@ NodeEngine/
 ├── package.json                # Node.js dependencies and scripts
 ├── .gitignore                  # Git ignore file
 └── webpack.config.js           # Webpack config for bundling client code
+
+
+
+client: browser-facing code, including Babylon.js rendering, player controls and assets.
+server: Node.js/Express server for game logic, sector data, and multiplayer.
+shared: Common code (constants, math utilities).
+assets: Stores 3D models (.gltf), textures, and sounds.
+tests: For unit tests.
+docs: Documentation.
+
+
+
+webpack.config.js: Bundles client-side JavaScript for performance.
